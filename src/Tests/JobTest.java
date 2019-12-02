@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.launchcode.techjobs_oo.*;
 
 import static org.junit.Assert.*;
-
+  import static org.junit.Assert.assertFalse;
 public class JobTest {
     Job test_Job;
     @Test
@@ -45,5 +45,20 @@ public class JobTest {
         assertEquals(positionTypeValue ,"Quality control");
         assertEquals(coreCompetencyValue,"Persistence");
 
+    }
+
+    @Test
+    public void testJobsForEquality() {
+        Job test_job = new Job("Product tester", new Employer("ACME"),
+                new Location("Desert"), new PositionType("Quality control"),
+                new CoreCompetency("Persistence"));
+        Job test_job2 = new Job("Product tester", new Employer("ACME"),
+                new Location("Desert"), new PositionType("Quality control"),
+                new CoreCompetency("Persistence"));
+        int jobId = test_job.getId();
+        int jobId2 = test_job2.getId();
+        //assertFalse(jobId == jobId2);
+        //jobId++;
+       assertFalse(jobId==jobId2);
     }
 }
