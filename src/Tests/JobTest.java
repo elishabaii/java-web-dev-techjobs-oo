@@ -7,19 +7,20 @@ import static org.junit.Assert.*;
   import static org.junit.Assert.assertFalse;
 public class JobTest {
     Job test_Job;
+
     @Test
     public void testSettingJobId() {
-      Job test_job = new Job();
-      Job test_job2 = new Job();
-      int jobId = test_job.getId();
-      int jobId2 = test_job2.getId();
-       assertFalse(jobId == jobId2);
+        Job test_job = new Job();
+        Job test_job2 = new Job();
+        int jobId = test_job.getId();
+        int jobId2 = test_job2.getId();
+        assertFalse(jobId == jobId2);
         jobId++;
-        assertEquals(jobId,jobId2);
+        assertEquals(jobId, jobId2);
     }
 
     @Test
-    public void testJobConstructorSetsAllFields(){
+    public void testJobConstructorSetsAllFields() {
         Job test_job = new Job("Product tester", new Employer("ACME"),
                 new Location("Desert"), new PositionType("Quality control"),
                 new CoreCompetency("Persistence"));
@@ -39,11 +40,11 @@ public class JobTest {
         assertTrue(positionType1 instanceof PositionType);
         assertTrue(coreCompetency1 instanceof CoreCompetency);
 
-        assertEquals(name,"Product tester");
-        assertEquals(employerValue,"ACME");
-        assertEquals(locationValue,"Desert");
-        assertEquals(positionTypeValue ,"Quality control");
-        assertEquals(coreCompetencyValue,"Persistence");
+        assertEquals(name, "Product tester");
+        assertEquals(employerValue, "ACME");
+        assertEquals(locationValue, "Desert");
+        assertEquals(positionTypeValue, "Quality control");
+        assertEquals(coreCompetencyValue, "Persistence");
 
     }
 
@@ -59,6 +60,7 @@ public class JobTest {
         int jobId2 = test_job2.getId();
         //assertFalse(jobId == jobId2);
         //jobId++;
-       assertFalse(jobId==jobId2);
+        assertFalse(jobId == jobId2);
     }
+
 }
