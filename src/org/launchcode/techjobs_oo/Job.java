@@ -55,7 +55,13 @@ public class Job {
     }
 
     public String toString(Job ajob) {
-        String Test_string = "";
+        String Test_string = "\nID: "  + ajob.getId() +"\n"+
+                "\nName: "  + ajob.getName() +"\n"+
+                "\nEmployer: "  + ajob.getEmployer() +"\n"+
+                "\nLocation: "  + ajob.getLocation() +"\n"+
+                "\nPosition Type: "  + ajob.getPositionType() +"\n"+
+                "\nCore Competency: "  + ajob.getCoreCompetency() +"\n";
+        System.out.print(Test_string);
         //Build up the string from the job object
         return Test_string;
     }

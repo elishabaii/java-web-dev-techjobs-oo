@@ -66,10 +66,12 @@ public class JobTest {
 
     @Test
     public void testToString() {
+        Job test_job1 = new Job();
+
         Job test_job = new Job("Product tester", new Employer("ACME"),
                 new Location("Desert"), new PositionType("Quality control"),
                 new CoreCompetency("Persistence"));
-        String testString = test_Job.toString(test_job);
+        String testString = test_job1.toString(test_job);
 //assert true that the job object begins and ends with a blank line
         //assertTrue(Boolean.parseBoolean(test_Job.toString()));
             }
