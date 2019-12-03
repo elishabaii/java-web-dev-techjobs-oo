@@ -72,6 +72,13 @@ public class JobTest {
                 new Location("Desert"), new PositionType("Quality control"),
                 new CoreCompetency("Persistence"));
         String testString = test_job1.toString(test_job);
+        String Test_string = "\nID: "  + test_job.getId() +"\n"+
+                "\nName: "  + "Product tester" +"\n"+
+                "\nEmployer: "  + "ACME" +"\n"+
+                "\nLocation: "  + "Desert" +"\n"+
+                "\nPosition Type: "  + "Quality control" +"\n"+
+                "\nCore Competency: "  + "Persistence" +"\n";
+        assertEquals(testString, Test_string);
 //assert true that the job object begins and ends with a blank line
         //assertTrue(Boolean.parseBoolean(test_Job.toString()));
             }
