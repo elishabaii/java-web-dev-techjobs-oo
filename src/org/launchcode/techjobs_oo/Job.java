@@ -54,6 +54,11 @@ public class Job {
         return Objects.hash(id, getName(), getEmployer(), getLocation(), getPositionType(), getCoreCompetency());
     }
 
+    public String toString(Job ajob) {
+        String Test_string = "";
+        //Build up the string from the job object
+        return Test_string;
+    }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.

@@ -5,6 +5,7 @@ import org.launchcode.techjobs_oo.*;
 
 import static org.junit.Assert.*;
   import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 public class JobTest {
     Job test_Job;
 
@@ -62,5 +63,15 @@ public class JobTest {
         //jobId++;
         assertFalse(jobId == jobId2);
     }
+
+    @Test
+    public void testToString() {
+        Job test_job = new Job("Product tester", new Employer("ACME"),
+                new Location("Desert"), new PositionType("Quality control"),
+                new CoreCompetency("Persistence"));
+        String testString = test_Job.toString(test_job);
+//assert true that the job object begins and ends with a blank line
+        //assertTrue(Boolean.parseBoolean(test_Job.toString()));
+            }
 
 }
