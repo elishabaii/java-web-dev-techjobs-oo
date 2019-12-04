@@ -14,7 +14,13 @@ public abstract class JobField {
 
     public JobField(String value) {
         this();
-        this.value = value;
+        if ((value == "") || (value == null)) {
+            this.value = ("Not available");
+        }
+        else
+        {
+            this.value = value;
+        }
     }
     public String toString(){
         return value;

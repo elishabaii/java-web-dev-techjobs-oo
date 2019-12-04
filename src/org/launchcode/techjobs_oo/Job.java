@@ -22,10 +22,13 @@ public class Job {
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
     // The constructor method
-    public Job(String name, Employer employer, Location location, PositionType positionType,CoreCompetency coreCompetency)
-    {
+    public Job(String name, Employer employer, Location location, PositionType positionType,CoreCompetency coreCompetency) {
         this();
-        this.name = name;
+        if ((name == "") || (name == null)) {
+            this.name = ("Not available");
+        } else {
+            this.name = name;
+        }
         this.employer = employer;
         this.location = location;
         this.positionType = positionType;
