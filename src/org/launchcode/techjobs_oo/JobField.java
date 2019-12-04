@@ -16,7 +16,9 @@ public abstract class JobField {
         this();
         this.value = value;
     }
-
+    public String toString(){
+        return value;
+    }
 
     @Override
     public boolean equals(Object o) {
